@@ -1,2 +1,2 @@
 # SansQuantumRepo
-This is my Github repository of Quantum projects.
+This is my Github repository of Quantum programmming projects.
