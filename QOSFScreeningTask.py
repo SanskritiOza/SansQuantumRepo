@@ -25,7 +25,9 @@ def odd_to_even(n, numbers):
     # Simulate the circuit
     simulator = Aer.get_backend('qasm_simulator')
     job = assemble(transpile(qc, simulator), shots=1)
-    result = simulator.run(job).result()
+    transpiled_circuits = transpile(qc, simulator)
+    #result = simulator.run(job).result()
+    result = simulator.run(transpiled_circuits).result()
     counts = result.get_counts(qc)
     
     # Post-process the measurement outcome to ensure numbers stay within the range [1, n)
